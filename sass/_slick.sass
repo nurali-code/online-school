@@ -88,30 +88,28 @@
         display: none
 
     &-arrow
-        width: 40px
+        width: 26px
+        height: 26px
         font-size: 0
-        height: 40px
-        background-color: $black
         color: transparent
         position: absolute
         z-index: 100
-        bottom: 0
+        bottom: 20px
         border: none
         background-image: url('../img/slider-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
-        background-size: 60%
-        border-radius: 50%
+        background-size: 50%
 
         &::before
             display: none
     
     &-prev
-        left: 0
+        left: 47%
         transform: scale(-1) !important
 
     &-next
-        right: 0
+        right: 47%
 
     &-disabled
         cursor: no-drop
