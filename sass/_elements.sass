@@ -1,0 +1,156 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: #000
+$second: #252244
+$prime: #EE1313
+
+@font-face
+    font-family: 'Gilroy'
+    src: url('../fonts/Gilroy-Regular.woff') format('woff')
+    font-weight: 400
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'Gilroy'
+    src: url('../fonts/Gilroy-Medium.woff') format('woff')
+    font-weight: 500
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'Gilroy'
+    src: url('../fonts/Gilroy-SemiBold.woff') format('woff')
+    font-weight: 600
+    font-style: normal
+    font-display: swap
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: $black
+    font-size: 16px
+    background-color: #fff
+    font-family: 'Gilroy', sans-serif
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+h1
+    font-size: 48px
+    font-weight: 500
+    line-height: normal
+    margin: 0 0 30px
+
+h2
+    font-size: 40px
+    font-weight: 500
+    margin: 0 0 60px
+    position: relative
+    z-index: 1
+    span
+        color: #828282
+        font-size: 20px
+        font-weight: 400
+        position: absolute
+        right: 0
+        top: 15px
+
+    &.center
+        text-align: center
+
+h3
+    font-size: 28px
+    font-weight: 500
+
+ol, ul
+    padding: 0 0 0 20px
+    li
+        font-size: 16px
+        font-weight: 400
+        padding: 6px 0
+
+.container
+    width: 96%
+    padding: 0 15px
+    max-width: 1430px
+    margin: 0 auto
+
+p
+    font-size: 16px
+    line-height: 130%
+
+img
+    max-width: 100%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .6
+
+section, .section
+    padding: 20px 0
+    position: relative
+
+.btn,
+.btn-blue
+    text-decoration: none
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    padding: 7px 30px
+    border-radius: 20px
+    font-size: 16px
+    font-weight: 500
+    min-width: 180px
+    color: white
+.btn
+    background-color: $prime
+
+    &-blue
+        background-color: $second
+        &:hover
+            opacity: 1
+            box-shadow: 0px 15px 44px -10px rgba($second, 0.6)
+
+    &:hover
+        opacity: 1
+        box-shadow: 0px 15px 44px -10px rgba($prime, 0.6)
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        color: rgba(0, 0, 0, .2)
+        background-color: rgba($prime, .3)
+        cursor: unset
+        animation: none
+        pointer-events: none
+        box-shadow: none
+
+.wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+mark
+    background: transparent
+    color: $prime
