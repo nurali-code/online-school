@@ -2,23 +2,44 @@
 @import 'elements'
 // @import 'slick'
 @import 'header'
-// @import 'footer'
+@import 'footer'
+
+main
+    padding-bottom: 100px
 
 .banner
     width: 1800px
     max-width: 96%
     margin: 0 auto
-    padding: 65px 0 36px 150px
+    padding: 65px 43px 37px 150px
+    overflow: hidden
     position: relative
     .container
         max-width: 1240px
+
     &-content
         max-width: 775px
         margin: 0 0 40px auto
 
     h1
         padding-left: 25px
-        
+
+    &-wrap
+        max-width: 40%
+        gap: 20px 4%
+
+    &-item
+        width: 48%
+        display: inline-block
+        text-align: center
+        font-size: 20px
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        margin: 0
+        img
+            display: block
+            margin: 0 auto 20px
 
     &_text
         font-size: 27px
@@ -41,3 +62,35 @@
         width: 100%
         height: 100%
         object-fit: cover
+
+    &-footer
+        width: 100%
+        padding-top: 52px
+
+    &_out
+        text-align: center
+        width: 32.2%
+        font-size: 35px
+        font-style: normal
+        font-weight: 700
+        color: white
+        padding: 15px 22px 16px
+        border-radius: 25px 
+        background-color: $prime
+
+    &--second
+        max-width: 100%
+        border-radius: 12px
+        display: flex
+        flex-wrap: wrap
+        padding-left: 43px
+        h1 
+            padding: 0
+            margin-bottom: 46px
+        .banner
+            &-content
+                max-width: 54%
+            &_text 
+                font-weight: 500
+                padding-left: 68px
+                margin: 0

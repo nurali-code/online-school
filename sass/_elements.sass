@@ -55,22 +55,14 @@ h1, .h1
         font-size: 70px
         display: block
 
-h2
-    font-size: 40px
-    font-weight: 500
-    margin: 0 0 60px
-    position: relative
-    z-index: 1
-    span
-        color: #828282
-        font-size: 20px
-        font-weight: 400
-        position: absolute
-        right: 0
-        top: 15px
+h2, .h2
+    font-size: 30px
+    font-style: normal
+    font-weight: 600
+    margin: 0 0 26px
 
-    &.center
-        text-align: center
+.outter
+    padding-left: 94px
 
 h3
     font-size: 28px
@@ -89,9 +81,23 @@ ol, ul
     max-width: 1430px
     margin: 0 auto
 
+.headline
+    background-color: $prime
+    box-shadow: 0 0 0 100vmax $prime
+    clip-path: inset(0 -100vmax)
+    color: white
+    text-align: center
+    font-size: 26px
+    font-style: normal
+    font-weight: 600
+    line-height: 134.8%
+    padding: 10px 0 11px
+    margin: 0 0 17px
+
 p
     font-size: 16px
-    line-height: 130%
+    line-height: 160%
+    margin: 0 0 35px
 
 img
     max-width: 100%
@@ -109,7 +115,7 @@ button
         opacity: .6
 
 section, .section
-    padding: 20px 0
+    padding: 33px 0
     position: relative
 
 .btn,
@@ -124,6 +130,11 @@ section, .section
     font-weight: 500
     min-width: 180px
     color: white
+
+.center-row
+    text-align: center
+    margin-bottom: 35px
+
 .btn
     background-color: $prime
 
