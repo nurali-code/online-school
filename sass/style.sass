@@ -154,7 +154,7 @@ main
         background-position: center center
         background-size: contain
         color: #eee
-        margin: 0 
+        margin: 0
         &:nth-child(1).active
             background-image: url('../img/st-f.svg')
             & ~ i
@@ -175,3 +175,82 @@ main
             background-image: url('../img/st-f.svg')
             & ~ i
                 background-image: url('../img/st-f.svg')
+
+.video
+    max-width: 1200px
+    margin: 0 auto 53px
+    position: relative
+    z-index: 1
+    video
+        width: 100%
+        display: block
+        aspect-ratio: 16/6
+        object-fit: cover
+        border-radius: 20px
+
+    .btnPlay
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('../img/play.svg')
+        background-repeat: no-repeat
+        background-position: center center
+
+.styled
+    list-style-type: none
+    padding: 0
+    li:not(.headline)
+        background-color: rgba(0, 0, 0, .025)
+        display: list-item
+        border-radius: 12px
+        margin: 0 0 42px
+        padding: 19px 20px 18px 90px
+        color: #4478C6
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: 160%
+        position: relative
+        min-height: 60px
+        &::after
+            content: ''
+            display: block
+            width: 42px
+            height: 42px
+            background-image: url('../img/arrow-down.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            position: absolute
+            top: -42px
+            left: 20px
+        &::before
+            content: attr(value)
+            display: inline-block
+            width: 46px
+            height: 46px
+            border-radius: 50%
+            text-align: center
+            line-height: 46px
+            background-color: $black
+            color: white
+            transform: translateY(-50%)
+            position: absolute
+            top: 50%
+            left: 19px
+            z-index: 100
+
+        &:first-child
+            &::after
+                display: none
+
+    .headline
+        margin-bottom: 42px
+
+.red
+    color: $prime
+.black
+    color: $black
