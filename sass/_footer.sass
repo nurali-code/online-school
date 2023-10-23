@@ -8,6 +8,7 @@
 
     &-col
         max-width: 35%
+        align-items: flex-start
         p
             font-size: 10px
             font-style: normal
@@ -15,7 +16,6 @@
 
     .header-social
         margin-right: 20px
-
 
     &-nav
         list-style: none
@@ -42,3 +42,30 @@
             border-bottom: 1px solid $prime
             padding-bottom: 1px
             margin-bottom: 8px
+
+    &-info
+        width: 100%
+        justify-content: flex-end
+        padding-top: 50px
+        gap: 30px
+        
+    &_dev
+        font-size: 10px
+        span,
+        img
+            display: inline-block
+            vertical-align: middle
+            text-align: right
+        img
+            margin-left: 6px
+
+    &_addres,
+    &_work
+        padding: 3px 0 3px 21px
+        margin: 0 0 2px 0
+        background-image: url('../img/ic-addres.svg')
+        background-repeat: no-repeat
+        background-position: center left
+        background-size: 14px auto
+    &_work
+        background-image: url('../img/ic-work.svg')
