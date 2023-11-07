@@ -321,7 +321,7 @@
     u
         position: relative
         display: inline-block
-        vertical-align: bottom
+        vertical-align: middle
         min-width: 17px
         text-decoration: none
         padding-bottom: 2px
@@ -335,6 +335,9 @@
             bottom: 0
             min-height: 1px
 
+        &:empty
+            vertical-align: bottom
+
 .id
     &_wrap
         display: flex
@@ -342,7 +345,7 @@
         align-items: center
         position: relative
         z-index: 1
-        padding-left: 60px
+        padding-left: 80px
 
         p
             margin: 0
@@ -449,14 +452,46 @@
         padding-left: 40px
         background-position: left top 18px
 
+    &-wrapper
+        position: relative
+        display: inline-block
+        margin: 0 10px 60px
+
     &-item
         display: inline-block
         padding: 10px
+        margin: 10px
         text-align: center
+        position: relative
 
-    &-info
-        display: block
-        font-size: 16px
+    &-info,
+    &-info_bottom,
+    &-info_top
+        font-size: 15px
         font-style: normal
         font-weight: 400
+        position: absolute
+        left: -5%
+        width: 110%
         color: red
+    &-info
+        &_bottom
+            bottom: -25px
+        &_top
+            top: -25px
+
+    &-descr
+        position: absolute
+        left: -5%
+        width: 110%
+        top: 40px
+        border-top: 1px solid red
+        padding-top: 23px
+        background-image: url('../img/arrow-up.svg')
+        background-repeat: no-repeat
+        background-position: top 4px center
+        color: #EE1313
+        text-align: center
+        font-size: 15px
+        font-weight: 400
+        line-height: 99.3%
