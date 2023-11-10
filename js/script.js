@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $('.qiuz__heading').on('click', function (e) {
+        $(this).next('.qiuz-content').slideToggle();
+    })
 
     $('.slider').slick({
         arrows: true,
@@ -25,5 +28,7 @@ $(document).ready(function () {
         $(this).next('video')[0].play();
         $(this).next('video').attr('controls', true);
     })
+
+
 });
 
