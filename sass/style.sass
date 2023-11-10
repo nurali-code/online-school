@@ -126,6 +126,7 @@
         z-index: -1
         width: 100%
         height: 100%
+        margin: 0 !important
         object-fit: cover
 
     &-footer
@@ -333,10 +334,14 @@
             border-bottom: 1px solid red
             position: absolute
             bottom: 0
-            min-height: 1px
+            min-height: 2px
 
         &:empty
             vertical-align: bottom
+
+    img
+        display: block
+        margin: 10px 0
 
 .id
     &_wrap
@@ -349,10 +354,11 @@
 
         p
             margin: 0
-            color: #4478C6
             font-size: 30px
             font-style: normal
             font-weight: 400
+            &:not(.red)
+                color: #4478C6
 
     &_info
         width: 312px
@@ -404,7 +410,7 @@
             font-size: 30px
             position: absolute
             left: 0
-            top: 10px
+            top: 4px
 
 .col
     width: 49.5%
@@ -441,25 +447,49 @@
             padding: 3px 0
             display: block
 
+    &__text
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        margin: 0
+
+.w
+    &-150
+        display: inline-block
+        min-width: 150px !important
+
 .box
     &-wrap
-        font-size: 30px
-        line-height: 120%
+        color: #000
         font-style: normal
         font-weight: 400
         background-image: url('../img/info.svg')
         background-repeat: no-repeat
+        font-size: 30px
+        line-height: 100%
         padding-left: 40px
         background-position: left top 18px
 
     &-wrapper
         position: relative
+        line-height: 99%
         display: inline-block
-        margin: 0 10px 60px
+        margin: 0 10px 70px
+
+    &-wide
+        position: relative
+        display: inline-block
+        margin: 0 10px 70px
+        &__item
+            position: relative
+            padding: 0 10px 0 30px
+            &:first-child
+                padding-left: 0
 
     &-item
         display: inline-block
         padding: 10px
+        line-height: 99%
         margin: 10px
         text-align: center
         position: relative
@@ -468,25 +498,42 @@
     &-info_bottom,
     &-info_top
         font-size: 15px
+        line-height: 99%
         font-style: normal
         font-weight: 400
         position: absolute
         left: -5%
         width: 110%
         color: red
+
     &-info
         &_bottom
-            bottom: -25px
+            bottom: -10px
+
         &_top
-            top: -25px
+            top: -10px
+
+    &-under
+        border-top: 1px solid red
+        padding-top: 4px
+        text-align: left
+        font-size: 15px
+        line-height: 99%
+        font-style: normal
+        font-weight: 400
+        position: absolute
+        left: -5%
+        top: 37px
+        width: 110%
+        color: red
 
     &-descr
         position: absolute
         left: -5%
         width: 110%
-        top: 40px
+        top: 37px
         border-top: 1px solid red
-        padding-top: 23px
+        padding-top: 21px
         background-image: url('../img/arrow-up.svg')
         background-repeat: no-repeat
         background-position: top 4px center
@@ -494,4 +541,4 @@
         text-align: center
         font-size: 15px
         font-weight: 400
-        line-height: 99.3%
+        line-height: 99%
