@@ -351,6 +351,8 @@
         position: relative
         z-index: 1
         padding-left: 80px
+        &-sm
+            padding-left: 40px
 
         p
             margin: 0
@@ -415,7 +417,8 @@
 .col
     width: 49.5%
     margin-bottom: 40px
-    text-align: center
+    &-wrap
+        align-items: flex-start
     &__heading
         border-radius: 16px
         background-color: #EE1313
@@ -424,17 +427,20 @@
         padding: 18px 20px
         text-align: center
         width: 100%
+        line-height: 120%
         color: #fff
         margin-bottom: 27px
 
     &__descr
         color: #4478C6
+        text-align: center
         font-size: 30px
         font-weight: 500
         line-height: 135%
         margin-bottom: 30px
 
     &-item
+        text-align: center
         border-radius: 12px
         background: #F6F6F6
         width: 33%
@@ -448,6 +454,7 @@
             display: block
 
     &__text
+        text-align: left
         width: 100%
         font-size: 30px
         font-style: normal
@@ -455,12 +462,23 @@
         margin: 0
         color: #000 !important
 
+    .col 
+        &__text
+            margin-bottom: 45px
+
 .w
     &-150
         display: inline-block
         min-width: 150px !important
 
 .box
+    &-sm
+        position: relative
+        z-index: 1
+        text-align: center
+        padding: 4px
+        display: inline-block
+        margin: 5px 0
     &-wrap
         color: #000
         font-style: normal
@@ -477,6 +495,16 @@
         line-height: 99%
         display: inline-block
         margin: 0 10px 70px
+
+    &-note
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 90%
+        white-space: nowrap
+        color: red !important
+        font-size: 15px
+        line-height: 99%
 
     &-wide
         position: relative
@@ -504,16 +532,16 @@
         font-style: normal
         font-weight: 400
         position: absolute
-        left: -5%
-        width: 110%
+        left: -3%
+        width: 106%
         color: red
 
     &-info
         &_bottom
-            bottom: -10px
+            top: 47px
 
         &_top
-            top: -10px
+            top: -11px
 
     &-under
         border-top: 1px solid red
@@ -597,3 +625,18 @@ fieldset
         &:checked ~ label
             &::after
                 background-color: red
+
+.heading
+    display: inline-block
+    border-radius: 12px
+    border: 1px solid #EE1313
+    padding: 29px 50px
+    color: #4478C6
+    text-align: center
+    font-size: 30px
+    font-style: normal
+    font-weight: 600
+    margin: 30px 0 40px
+
+.center
+    text-align: center !important
